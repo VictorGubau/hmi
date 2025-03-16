@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantalla</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  <script>
+
+
+
+    // when clicking the buttons, show the overlay for the duration specified in the data-duration attribute
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.btn');
+      const overlay = document.querySelector('.overlay');
+      const content = document.querySelector('.content');
+
+      const audio = document.querySelector('audio');
+
+      const audioSrcs = [
+        '/assets/musica.mp3',
+
+
+
+      ];
+
+      // Preload audio files
+      audioSrcs.forEach(src => {
+        const audioElement = new Audio(src);
+        audioElement.preload = 'auto';
+      });
+
+      // Cogemos una canción aleatoria de la lista de audioSrcs
+      const randomAudioSrc = () => {
+        const randomIndex = Math.floor(Math.random() * audioSrcs.length);
+        return audioSrcs[randomIndex];
+      };
+
+
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+
+
+          // Eventos al hacer click en un botón
+
+
+          // ----------------------
+
+
+          // ----------------------
+
+
+          // Cogemos la duración del zumo de la etiqueta data-duration
+          const duration = parseInt(this.getAttribute('data-duration'));
+
+          // Cambiamos el color de fondo del overlay a un color aleatorio
+          const audioSrc = randomAudioSrc();
+          if (audioSrc) {
+            audio.src = audioSrc;
+            audio.play();
+          }
+          overlay.style.display = 'grid';
+          content.style.animationDuration = duration + 'ms';
+
+          setTimeout(() => {
+            // Eventos de finalización el tiempo de exprimido
+            overlay.style.display = 'none';
+            audio.pause();
+            audio.currentTime = 0;
+          }, duration);
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="overlay" style="display: none;">
+    <div class="content">
+      <img src="./assets/loader2.png" class="exprimidor-img" alt="Profile logo">
+    </div>
+  </div>
+  <div class="header-container">
+    <header class="header">
+      <img src="./assets/logo.png" alt="Profile logo" height=80">
+      <h1>Onlyfrutas</h1>
+    </header>
+    <h2>Solo fruta, todo sabor</h2>
+  </div>
+  <nav class="navbar">
+
+    <!-- CAMBIAR ESTOS NUMEROS PARA LA DURACIÓN DEL ZUMO  (ms)-->
+    <button class="btn" data-duration="10000">Vaso pequeño</button>
+    <button class="btn" data-duration="400">Vaso mediano</button>
+    <button class="btn" data-duration="500">Vaso grande</button>
+    <button class="btn" data-duration="10000">Botella</button>
+  </nav>
+
+
+  <figure>
+    <audio loop src="/assets/musica.mp3"></audio>
+  </figure>
+
+  <footer>
+    SZ-80N
+  </footer>
+</body>
+
+</html>

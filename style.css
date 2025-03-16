@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+
+body{
+  font-family: sans-serif;
+  background-color: #ffc77d;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+   font-family: "Kanit", sans-serif;
+   font-weight: 500;
+   flex-direction: column;
+   gap: 80px;
+  }
+
+  h1{
+    font-size: 3em;
+    color: #2a4134;
+    padding: 0;
+    margin: 0;
+  }
+  h2{
+    padding: 0;
+    margin: 0;
+    color: #2a4134d7; 
+  }
+  
+  .btn{
+  font-family: "Kanit", sans-serif;
+  border-radius: 30px;
+  border: 0px solid black;
+  padding: 5px;  min-height: 120px;
+  cursor: pointer;
+  background-color: #ff6f00;
+  font-size: 25px;
+  box-shadow: #807A79 5px 5px 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn:hover{
+  filter: brightness(0.9);
+  box-shadow: #807A79 2px 2px 5px;
+}
+.header-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 900px;
+}
+
+.navbar{
+  padding: 20px;
+  max-width: 900px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+footer{
+  position: fixed;
+  font-size: 1.4em;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.exprimidor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@keyframes infinite-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.exprimidor-img{
+  width: 300px;
+   animation: infinite-rotation 2s linear infinite;
+}
+
+
+.overlay{
+  /* display: none; */
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 270px;
+  top: 0;
+  z-index: 10000;
+  place-items: center;
+  left: 0;
+  background-color: #ff6f0080
+  /* display: none; */
+}
+
