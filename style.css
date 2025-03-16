@@ -8,6 +8,7 @@ body{
   padding: 0;
   padding-top: 30px;
   display: flex;
+  align-items: center;
   justify-content: center;
    font-family: "Kanit", sans-serif;
    font-weight: 500;
@@ -60,8 +61,9 @@ body{
 }
 
 .navbar{
+width: 100%;
+  max-width: 80vw;
   padding: 20px;
-  max-width: 900px;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(2, 1fr);
@@ -69,11 +71,16 @@ body{
 
 footer{
   position: fixed;
+  display: flex;
   font-size: 1.4em;
+
   bottom: 0;
-  width: 100%;
-  text-align: center;
   padding: 20px;
+  justify-content: space-between;
+  background-color: #ff6f00;
+  align-items: center;
+  width: 100%;
+  gap: 10px;  
 }
 
 .exprimidor{
@@ -112,3 +119,13 @@ footer{
   /* display: none; */
 }
 
+.link{
+  display: flex;
+  gap: 5px;
+  padding-left: 20px;
+  align-items: center;
+}
+.invisible{
+  padding-right: 20px;
+  visibility: hidden;
+}
