@@ -12,7 +12,7 @@ body{
    font-family: "Kanit", sans-serif;
    font-weight: 500;
    flex-direction: column;
-   gap: 80px;
+   gap: 60px;
   }
 
   h1{
@@ -91,7 +91,7 @@ footer{
   }
 }
 .exprimidor-img{
-  width: 300px;
+  width: 250px;
    animation: infinite-rotation 2s linear infinite;
 }
 
@@ -101,7 +101,7 @@ footer{
   position: fixed;
   width: 100vw;
   height: 100vh;
-  padding-top: 270px;
+  padding-top: 150px;
   top: 0;
   z-index: 10000;
   place-items: center;
